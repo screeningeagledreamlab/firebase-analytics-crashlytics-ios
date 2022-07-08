@@ -72,12 +72,15 @@ zip_frameworks () {
 
 prepare_files_for_distribution () {
     local dist="$1"
+    local included="$2"
     # Create the distribution folder
     mkdir $dist
-    # Copy unzipped frameworks for testing (Package.swift using local binaries)
-    for i in */*.xcframework; do cp -rf $i $dist; done
-    # Copy zipped frameworks for release (these will be uploaded to remote)
-    for i in */*.xcframework.zip; do cp -f $i $dist; done
+    for library in $included; do (
+        # Copy unzipped frameworks for testing (Package.swift using local binaries)
+        for i in $library/*.xcframework; do echo $i; cp -rf $i $dist; done
+        # Copy zipped frameworks for release (these will be uploaded to remote)
+        for i in $library/*.xcframework.zip; do echo $i; cp -f $i $dist; done
+    ) & done;
 }
 
 generate_sources () {
@@ -234,15 +237,16 @@ generate_swift_package () {
     local dist="$3"
     local repo="$4"
     local local_dist="$5"
+    local included="$6"
     local libraries="libraries.txt"
     local targets="targets.txt"
     local binaries="binaries.txt"
     # Create package file
     cp -f $template $package
     # Create libraries
-    comma=""; for i in */; do write_library $i $libraries $comma && comma=","; done
+    comma=""; for i in $included; do write_library $i $libraries $comma && comma=","; done
     # Create targets that define each library's dependencies and resources
-    comma=""; for i in */; do write_target $i $targets $comma && comma=","; done
+    comma=""; for i in $included; do write_target $i $targets $comma && comma=","; done
     # Create binary targets
     if [[ -n $local_dist ]]; then
         echo "Creating local Package.swift for testing..."
@@ -275,6 +279,7 @@ set -o pipefail
 # Repos
 firebase_repo="https://github.com/firebase/firebase-ios-sdk"
 xcframeworks_repo="https://github.com/screeningeagledreamlab/firebase-analytics-crashlytics-ios"
+included_frameworks="FirebaseCrashlytics FirebaseAnalytics"
 
 # Release versions
 latest=$(latest_release_number $firebase_repo)
@@ -305,16 +310,16 @@ if [[ $latest != $current || $debug ]]; then
         rename_frameworks "_"
         zip_frameworks
         echo "Creating distribution files..."
-        prepare_files_for_distribution "../$distribution"
+        prepare_files_for_distribution "../$distribution" "$included_frameworks"
         echo "Creating source files..."
         generate_sources "../$sources"
         # Create test package using local binaries and make sure it builds
-        generate_swift_package "../$package" "$home/package_template.swift" "../$distribution" $xcframeworks_repo $distribution
+        generate_swift_package "../$package" "$home/package_template.swift" "../$distribution" $xcframeworks_repo $distribution "$included_frameworks"
         echo "Validating..."
         (cd ..; swift package dump-package | read pac)
         (cd ..; swift build) # TODO: create tests and replace this line with `(cd ..; swift test)`
         # Create release package using remote binaries and make sure the Package.swift file is parseable
-        generate_swift_package "../$package" "$home/package_template.swift" "../$distribution" $xcframeworks_repo ''
+        generate_swift_package "../$package" "$home/package_template.swift" "../$distribution" $xcframeworks_repo '' "$included_frameworks"
         echo "Validating..."
         (cd ..; swift package dump-package | read pac)
     )
