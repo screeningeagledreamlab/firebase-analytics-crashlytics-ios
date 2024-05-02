@@ -294,7 +294,7 @@ if [[ $latest != $current || $debug ]]; then
     distribution="dist"
     sources="Sources"
     package="Package.swift"
-    zipNotFound=0
+    zipNotFound=""
 
     # Generate files in a temporary directory
     # Use subshell to return to original directory when finished with scratchwork
@@ -334,7 +334,7 @@ if [[ $latest != $current || $debug ]]; then
     )
 
     # Skip deploy if zip not found
-    if [[ $zipNotFound ]]; then exit 1; fi
+    if [[ $zipNotFound ]]; then exit 0; fi
 
     echo "Moving files to repo..."; cd ..
     # Remove any existing files
