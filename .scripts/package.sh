@@ -319,6 +319,7 @@ if [[ $latest != $current || $debug ]]; then
         zip_frameworks
         echo "Creating distribution files..."
         prepare_files_for_distribution "../$distribution" "$included_frameworks"
+        wait
         echo "Creating source files..."
         generate_sources "../$sources"
         # Create test package using local binaries and make sure it builds
