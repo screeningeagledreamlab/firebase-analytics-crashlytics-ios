@@ -294,7 +294,6 @@ if [[ $latest != $current || $debug ]]; then
     distribution="dist"
     sources="Sources"
     package="Package.swift"
-    zipNotFound=""
 
     # Generate files in a temporary directory
     # Use subshell to return to original directory when finished with scratchwork
@@ -305,11 +304,10 @@ if [[ $latest != $current || $debug ]]; then
         echo "Downloading latest release..."
         if ! output=$(gh release download --pattern "Firebase*.zip" --repo $firebase_repo 2>&1); then
             echo "$output"
-            if echo "$output" | grep -q "no assets match"; then
+            if echo "$output" | grep -q "no assets"; then
                 echo "Firebase.zip is not found. Skipping the release."
-                zipNotFound=1
             fi
-            exit 1
+            exit 0
         fi
         echo "Unzipping.."
         unzip -q 'Firebase*.zip'
@@ -333,8 +331,8 @@ if [[ $latest != $current || $debug ]]; then
         (cd ..; swift package dump-package | read pac)
     )
 
-    # Skip deploy if zip not found
-    if [[ $zipNotFound ]]; then exit 0; fi
+    # Skip deploy if the Firebase folder does not exist
+    if [ ! -d "$scratch/Firebase" ]; then echo "Cancelled."; exit 0; fi
 
     echo "Moving files to repo..."; cd ..
     # Remove any existing files
