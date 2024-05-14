@@ -309,7 +309,7 @@ if [[ $latest != $current || $debug ]]; then
             fi
             exit 0
         fi
-        echo "Unzipping.."
+        echo "Unzipping..."
         unzip -q 'Firebase*.zip'
         echo "Preparing xcframeworks for distribution..."
         cd Firebase
@@ -348,7 +348,7 @@ if [[ $latest != $current || $debug ]]; then
     # Deploy to repository
     echo "Merging changes to Github..."
     commit_changes "release/$latest"
-    echo "Creating release draft"
+    echo "Creating release draft..."
     echo "Release $latest" | gh release create --target "release/$latest" --draft $latest $scratch/dist/*.xcframework.zip
 else
     echo "$current is up to date."
