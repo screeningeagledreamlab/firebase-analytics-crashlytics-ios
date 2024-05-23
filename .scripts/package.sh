@@ -279,7 +279,7 @@ set -o pipefail
 # Repos
 firebase_repo="https://github.com/firebase/firebase-ios-sdk"
 xcframeworks_repo="https://github.com/screeningeagledreamlab/firebase-analytics-crashlytics-ios"
-included_frameworks="FirebaseCrashlytics FirebaseAnalytics"
+included_frameworks="FirebaseCrashlytics FirebaseAnalytics FirebaseRemoteConfig"
 
 # Release versions
 latest=$(latest_release_number $firebase_repo)
