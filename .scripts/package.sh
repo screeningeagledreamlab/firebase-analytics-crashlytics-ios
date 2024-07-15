@@ -65,7 +65,8 @@ rename_frameworks () {
 zip_frameworks () {
     for i in */*.xcframework; do (
         local name=$(xcframework_name $i)
-        cd "$i/../"; zip -rqo "$name.xcframework.zip" "$name.xcframework"
+        # Preserve symbolic links with -y option
+        cd "$i/../"; zip -ryqo "$name.xcframework.zip" "$name.xcframework"
     ) & done;
     wait
 }
