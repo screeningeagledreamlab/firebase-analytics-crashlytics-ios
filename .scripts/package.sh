@@ -388,7 +388,12 @@ if [[ $latest != $current || $debug ]]; then
     echo "Merging changes to Github..."
     commit_changes "release/$latest"
     echo "Creating release draft..."
-    echo "Release $latest" | gh release create --target "release/$latest" --draft $latest $scratch/dist/*.xcframework.zip
+    echo "Release $latest" | gh release create $latest \
+        --target "release/$latest" \
+        --draft \
+        --title "Firebase Analytics & Crashlytics Apple $latest" \
+        --notes "- Based on [Firebase Apple $latest](https://github.com/firebase/firebase-ios-sdk/releases/tag/$latest)" \
+        $scratch/dist/*.xcframework.zip
 else
     echo "$current is up to date."
 fi
