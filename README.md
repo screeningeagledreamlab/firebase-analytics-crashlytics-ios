@@ -18,10 +18,10 @@ Please follow the steps:
 ### Publish the release
 
 1. Double-check the draft release (all information is prefilled).
-  1. The new tag is set to the new version.
-  1. The target branch is set to `master`, since the PR has been merged.
-  1. The title and details contain the correct version.
-  1. Ensure "Set as the latest release" is selected.
+    1. The new tag is set to the new version.
+    1. The target branch is set to `master`, since the PR has been merged.
+    1. The title and details contain the correct version.
+    1. Ensure "Set as the latest release" is selected.
 2. Publish the release.
 
 <img src="https://github.com/screeningeagledreamlab/firebase-analytics-crashlytics-ios/assets/158831/cf657f01-2a22-46fc-977a-863236ef8a43" width="700">
