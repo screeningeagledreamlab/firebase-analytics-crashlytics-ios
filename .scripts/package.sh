@@ -179,7 +179,7 @@ write_target () {
         \"$exclude\"" >> $output; comma=",";
         done; printf "\n      ]" >> $output;
     fi
-    
+
     # Resources are expected to be inside the $library/Resources folder
     # Note: disabling because these resources will not be in the main bundle
     # https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/issues/23
@@ -189,7 +189,7 @@ write_target () {
     #    .process(\"Resources/$(resource_name $i)\")" >> $output; comma=","
     #    done; printf "\n      ]" >> $output;
     # fi
-    
+
     # Closing bracket
     printf "\n    )" >> $output
 }
@@ -389,7 +389,7 @@ if [[ $latest != $current || $debug ]]; then
     commit_changes "release/$latest"
     echo "Creating release draft..."
     echo "Release $latest" | gh release create $latest \
-        --target "release/$latest" \
+        --target "master" \
         --draft \
         --title "Firebase Analytics & Crashlytics Apple $latest" \
         --notes "- Based on [Firebase Apple $latest](https://github.com/firebase/firebase-ios-sdk/releases/tag/$latest)" \
