@@ -75,93 +75,93 @@ let package = Package(
     ),
     .binaryTarget(
       name: "_FBLPromises",
-      url: "https://github.com/screeningeagledreamlab/firebase-analytics-crashlytics-ios/releases/download/13.1.0/_FBLPromises.xcframework.zip",
-      checksum: "ed84310cdc452d9de6d8bb9eb4352bd830f0f91c0dedfde66bfcd206d7a3575e"
+      url: "https://github.com/screeningeagledreamlab/firebase-analytics-crashlytics-ios/releases/download/12.19.3/_FBLPromises.xcframework.zip",
+      checksum: "dc0d6820fbde2128b7874030b8cd2cdc4ff4bcdda143a1d19e013b47a7c18668"
     ),
     .binaryTarget(
       name: "_FirebaseABTesting",
-      url: "https://github.com/screeningeagledreamlab/firebase-analytics-crashlytics-ios/releases/download/13.1.0/_FirebaseABTesting.xcframework.zip",
-      checksum: "689c9e078d09cd80a6e376defad1cf3fef4ed83add78bfab95f8d6029ce69a82"
+      url: "https://github.com/screeningeagledreamlab/firebase-analytics-crashlytics-ios/releases/download/12.19.3/_FirebaseABTesting.xcframework.zip",
+      checksum: "513668c33d6e7801bdf2e54a499fca756591a8d15384f7de7fe8d019e6cb3d0b"
     ),
     .binaryTarget(
       name: "_FirebaseAnalytics",
-      url: "https://github.com/screeningeagledreamlab/firebase-analytics-crashlytics-ios/releases/download/13.1.0/_FirebaseAnalytics.xcframework.zip",
-      checksum: "736b30a8ed3df205db57bdb6ac0205e88d3d9100d8bc1e91d6c7ac04da2896a9"
+      url: "https://github.com/screeningeagledreamlab/firebase-analytics-crashlytics-ios/releases/download/12.19.3/_FirebaseAnalytics.xcframework.zip",
+      checksum: "c3a6b4718b5925ef47d3faebb5ae1c34f14e2b15cc0ce7084cc62b9d46f5af35"
     ),
     .binaryTarget(
       name: "_FirebaseCore",
-      url: "https://github.com/screeningeagledreamlab/firebase-analytics-crashlytics-ios/releases/download/13.1.0/_FirebaseCore.xcframework.zip",
-      checksum: "2604ab0f8f0dd65ada55bdd9359a03780525e60841196fa2a6e31f6773c9ad90"
+      url: "https://github.com/screeningeagledreamlab/firebase-analytics-crashlytics-ios/releases/download/12.19.3/_FirebaseCore.xcframework.zip",
+      checksum: "ec5c82fa157dceeb7bd1ea714643b5391313b503883b6eb5b94aaca98a1de8f9"
     ),
     .binaryTarget(
       name: "_FirebaseCoreExtension",
-      url: "https://github.com/screeningeagledreamlab/firebase-analytics-crashlytics-ios/releases/download/13.1.0/_FirebaseCoreExtension.xcframework.zip",
-      checksum: "1517cea3a7f09a4ca3ac974e389b0fc02791304dc393e984b53e56201a981368"
+      url: "https://github.com/screeningeagledreamlab/firebase-analytics-crashlytics-ios/releases/download/12.19.3/_FirebaseCoreExtension.xcframework.zip",
+      checksum: "379f2cbc478d769f7a9dd2ef6e202f608ba13002668883318bb6b3c144f46489"
     ),
     .binaryTarget(
       name: "_FirebaseCoreInternal",
-      url: "https://github.com/screeningeagledreamlab/firebase-analytics-crashlytics-ios/releases/download/13.1.0/_FirebaseCoreInternal.xcframework.zip",
-      checksum: "18085fc2608a9e3023cd58edcb4c006675912a0babee48cc5a45a09ca73352e9"
+      url: "https://github.com/screeningeagledreamlab/firebase-analytics-crashlytics-ios/releases/download/12.19.3/_FirebaseCoreInternal.xcframework.zip",
+      checksum: "87f9f590e2dd375af71c2ab8efd0acca947a31adb0eb93bc07f4d5f0e61754cf"
     ),
     .binaryTarget(
       name: "_FirebaseCrashlytics",
-      url: "https://github.com/screeningeagledreamlab/firebase-analytics-crashlytics-ios/releases/download/13.1.0/_FirebaseCrashlytics.xcframework.zip",
-      checksum: "fe5ca8201901e1b7b1cfbc44a759dc9407b9dba6970f0c2e8e19d3ec73a74eff"
+      url: "https://github.com/screeningeagledreamlab/firebase-analytics-crashlytics-ios/releases/download/12.19.3/_FirebaseCrashlytics.xcframework.zip",
+      checksum: "e5fb96606081b0ae4137adf85e924f8e3fe1ae12397af07d860344e7389d97ac"
     ),
     .binaryTarget(
       name: "_FirebaseInstallations",
-      url: "https://github.com/screeningeagledreamlab/firebase-analytics-crashlytics-ios/releases/download/13.1.0/_FirebaseInstallations.xcframework.zip",
-      checksum: "3730185e933389c45d767b8834fad5de6b2b510498cc409f7ca0530c379913d0"
+      url: "https://github.com/screeningeagledreamlab/firebase-analytics-crashlytics-ios/releases/download/12.19.3/_FirebaseInstallations.xcframework.zip",
+      checksum: "8020d6d6845ed6e474b759fa80f8ea709f42a57b407b3629284cfbf40243c182"
     ),
     .binaryTarget(
       name: "_FirebaseRemoteConfig",
-      url: "https://github.com/screeningeagledreamlab/firebase-analytics-crashlytics-ios/releases/download/13.1.0/_FirebaseRemoteConfig.xcframework.zip",
-      checksum: "d52858f21297a37162a669ff7f9c18337c730b1b7544d56122e1f3c29f0b1f14"
+      url: "https://github.com/screeningeagledreamlab/firebase-analytics-crashlytics-ios/releases/download/12.19.3/_FirebaseRemoteConfig.xcframework.zip",
+      checksum: "bbaf97044642eb24e15bee8973cc5ac494d958bd7076a9e17db91bac6cc68dd0"
     ),
     .binaryTarget(
       name: "_FirebaseRemoteConfigInterop",
-      url: "https://github.com/screeningeagledreamlab/firebase-analytics-crashlytics-ios/releases/download/13.1.0/_FirebaseRemoteConfigInterop.xcframework.zip",
-      checksum: "660ca9c0e929ade37b8534e82c22332838c6bad992113a574e385ec803bc8bb2"
+      url: "https://github.com/screeningeagledreamlab/firebase-analytics-crashlytics-ios/releases/download/12.19.3/_FirebaseRemoteConfigInterop.xcframework.zip",
+      checksum: "b2f259d3ad6f950662f62da0ec2bff6ece132e598cf5e22143694a8fc178bd35"
     ),
     .binaryTarget(
       name: "_FirebaseSessions",
-      url: "https://github.com/screeningeagledreamlab/firebase-analytics-crashlytics-ios/releases/download/13.1.0/_FirebaseSessions.xcframework.zip",
-      checksum: "dc7558806db1c7178557e0233855783440785b7fa6e8d02768867b1728bc1865"
+      url: "https://github.com/screeningeagledreamlab/firebase-analytics-crashlytics-ios/releases/download/12.19.3/_FirebaseSessions.xcframework.zip",
+      checksum: "7d71271ed6795527d3980d59faa85206d9ee09c4c915a328e2ce853050d04e4a"
     ),
     .binaryTarget(
       name: "_FirebaseSharedSwift",
-      url: "https://github.com/screeningeagledreamlab/firebase-analytics-crashlytics-ios/releases/download/13.1.0/_FirebaseSharedSwift.xcframework.zip",
-      checksum: "60acf0f5aab54163da381563dab6fb20173a4d28851dc17b3288ea623fab7675"
+      url: "https://github.com/screeningeagledreamlab/firebase-analytics-crashlytics-ios/releases/download/12.19.3/_FirebaseSharedSwift.xcframework.zip",
+      checksum: "f9450918608b9ef63d6fce201539ad3d7519fabc6503ab7984e8f67c4f57a79a"
     ),
     .binaryTarget(
       name: "_GoogleAdsOnDeviceConversion",
-      url: "https://github.com/screeningeagledreamlab/firebase-analytics-crashlytics-ios/releases/download/13.1.0/_GoogleAdsOnDeviceConversion.xcframework.zip",
-      checksum: "bff8551b24f0a0f691b14d7233113bbbf601cb9f8932d437735a063e1c14d813"
+      url: "https://github.com/screeningeagledreamlab/firebase-analytics-crashlytics-ios/releases/download/12.19.3/_GoogleAdsOnDeviceConversion.xcframework.zip",
+      checksum: "942034a316495d767694bffe60fbbe745169165c3f33ee30d40b13de8906ed97"
     ),
     .binaryTarget(
       name: "_GoogleAppMeasurement",
-      url: "https://github.com/screeningeagledreamlab/firebase-analytics-crashlytics-ios/releases/download/13.1.0/_GoogleAppMeasurement.xcframework.zip",
-      checksum: "380d3b7bcf740af124f3d3b49a152841584a54edd3b34995ffed4fa5b4fecab5"
+      url: "https://github.com/screeningeagledreamlab/firebase-analytics-crashlytics-ios/releases/download/12.19.3/_GoogleAppMeasurement.xcframework.zip",
+      checksum: "faffcc0433258a8fb9f03ed8841718a222b022571998704b183ad5c7a8ed3641"
     ),
     .binaryTarget(
       name: "_GoogleAppMeasurementIdentitySupport",
-      url: "https://github.com/screeningeagledreamlab/firebase-analytics-crashlytics-ios/releases/download/13.1.0/_GoogleAppMeasurementIdentitySupport.xcframework.zip",
-      checksum: "43b7defe1db844a22c0f1ac67a57a5bf81828187df75bea228c627464ed471ce"
+      url: "https://github.com/screeningeagledreamlab/firebase-analytics-crashlytics-ios/releases/download/12.19.3/_GoogleAppMeasurementIdentitySupport.xcframework.zip",
+      checksum: "39b90376769a4ed2e716f8a8db8c964ce6c717109dc23eb90fd4e04317b1c303"
     ),
     .binaryTarget(
       name: "_GoogleDataTransport",
-      url: "https://github.com/screeningeagledreamlab/firebase-analytics-crashlytics-ios/releases/download/13.1.0/_GoogleDataTransport.xcframework.zip",
-      checksum: "7383a30714aea66fb4aab8a2a66064727ebc6f3b8763a03d7fd7254c999c0f11"
+      url: "https://github.com/screeningeagledreamlab/firebase-analytics-crashlytics-ios/releases/download/12.19.3/_GoogleDataTransport.xcframework.zip",
+      checksum: "cd9e77faf0e4b953ca24f1b9d1ab367c4db04b291416365c005c443a73b7bd25"
     ),
     .binaryTarget(
       name: "_GoogleUtilities",
-      url: "https://github.com/screeningeagledreamlab/firebase-analytics-crashlytics-ios/releases/download/13.1.0/_GoogleUtilities.xcframework.zip",
-      checksum: "6138dd221e40dd5247b9f93f921e762dd2ed572809ebb4ff094c05d28ecefc06"
+      url: "https://github.com/screeningeagledreamlab/firebase-analytics-crashlytics-ios/releases/download/12.19.3/_GoogleUtilities.xcframework.zip",
+      checksum: "ae65ff603d81234e80ce97ced5713b0377794fdcbff06842dd22f650c736bb01"
     ),
     .binaryTarget(
       name: "_nanopb",
-      url: "https://github.com/screeningeagledreamlab/firebase-analytics-crashlytics-ios/releases/download/13.1.0/_nanopb.xcframework.zip",
-      checksum: "9c4848b23e2bc5d1db9da0f531cc133bdab6866251bd9846dbab331075828359"
+      url: "https://github.com/screeningeagledreamlab/firebase-analytics-crashlytics-ios/releases/download/12.19.3/_nanopb.xcframework.zip",
+      checksum: "8662285fd80651f07a3cf0cb93bfeebc4bb5ba5607f12b0f086246eef90a4496"
     )
   ]
 )
